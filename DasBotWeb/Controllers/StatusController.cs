@@ -4,36 +4,25 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using DasBotWeb.Models;
 
 namespace DasBotWeb.Controllers
 {
     public class StatusController : ApiController
     {
         // GET api/<controller>
-        public IEnumerable<string> Get()
+        public IEnumerable<Activity> Get()
         {
-            return new string[] { "value1", "value2" };
+            return new [] {new Activity {Status = true, Name = ActivityType.Sailing, Description = "Segling"}};
         }
 
+        
         // GET api/<controller>/5
-        public string Get(int id)
-        {
-            return "value";
-        }
+        //public Activity Get(int id)
+        //{
+        //    return "value";
+        //}
 
-        // POST api/<controller>
-        public void Post([FromBody]string value)
-        {
-        }
-
-        // PUT api/<controller>/5
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE api/<controller>/5
-        public void Delete(int id)
-        {
-        }
+      
     }
 }
