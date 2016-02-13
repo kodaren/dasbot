@@ -13,7 +13,11 @@ namespace DasBotWeb.Controllers
         // GET api/<controller>
         public IEnumerable<Activity> Get()
         {
-            return new [] {new Activity {Status = true, Name = ActivityType.Sailing, Description = "Segling"}};
+            return new []
+            {
+                new Activity {Status = true, Name = ActivityType.Sailing, Description = "Segling"},
+                new Activity {Status = false, Name = ActivityType.Fishing, Description = "Fiske"}
+            };
         }
 
         
