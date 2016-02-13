@@ -10,23 +10,24 @@ namespace DasBotWeb.Controllers
 {
     public class StatusController : ApiController
     {
-        // GET api/<controller>
-        public IEnumerable<Activity> Get()
-        {
-            return new []
-            {
+        private readonly Activity[] data = {
                 new Activity {Status = true, Name = ActivityType.Sailing, Description = "Segling"},
                 new Activity {Status = false, Name = ActivityType.Fishing, Description = "Fiske"}
             };
+
+        // GET api/<controller>
+        public IEnumerable<Activity> Get()
+        {
+            return data;
         }
 
-        
-        // GET api/<controller>/5
-        //public Activity Get(int id)
+
+        //[Route("status/{statusName}")]
+        //public Activity Get(string statusName)
         //{
-        //    return "value";
+        //    return data.Where(x => x.Name == (ActivityType)(statusName));
         //}
 
-      
+
     }
 }
