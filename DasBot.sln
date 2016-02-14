@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DasBotModels", "DasBotModel
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DasBotAzureTableStorage", "DasBotAzureTableStorage\DasBotAzureTableStorage.csproj", "{F815359C-0D60-45CA-9F2E-66D86A6B3089}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "DasBotMessageConsole", "DasBotMessageConsole\DasBotMessageConsole.xproj", "{58760974-18BA-473A-9416-4542F0AF64D9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DasBotTestConsole", "DasBotTestConsole\DasBotTestConsole.csproj", "{2CB93E6A-4D70-4232-8B3B-DFB6F7C84402}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -95,22 +95,22 @@ Global
 		{F815359C-0D60-45CA-9F2E-66D86A6B3089}.Release|x64.Build.0 = Release|Any CPU
 		{F815359C-0D60-45CA-9F2E-66D86A6B3089}.Release|x86.ActiveCfg = Release|Any CPU
 		{F815359C-0D60-45CA-9F2E-66D86A6B3089}.Release|x86.Build.0 = Release|Any CPU
-		{58760974-18BA-473A-9416-4542F0AF64D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{58760974-18BA-473A-9416-4542F0AF64D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{58760974-18BA-473A-9416-4542F0AF64D9}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{58760974-18BA-473A-9416-4542F0AF64D9}.Debug|ARM.Build.0 = Debug|Any CPU
-		{58760974-18BA-473A-9416-4542F0AF64D9}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{58760974-18BA-473A-9416-4542F0AF64D9}.Debug|x64.Build.0 = Debug|Any CPU
-		{58760974-18BA-473A-9416-4542F0AF64D9}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{58760974-18BA-473A-9416-4542F0AF64D9}.Debug|x86.Build.0 = Debug|Any CPU
-		{58760974-18BA-473A-9416-4542F0AF64D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{58760974-18BA-473A-9416-4542F0AF64D9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{58760974-18BA-473A-9416-4542F0AF64D9}.Release|ARM.ActiveCfg = Release|Any CPU
-		{58760974-18BA-473A-9416-4542F0AF64D9}.Release|ARM.Build.0 = Release|Any CPU
-		{58760974-18BA-473A-9416-4542F0AF64D9}.Release|x64.ActiveCfg = Release|Any CPU
-		{58760974-18BA-473A-9416-4542F0AF64D9}.Release|x64.Build.0 = Release|Any CPU
-		{58760974-18BA-473A-9416-4542F0AF64D9}.Release|x86.ActiveCfg = Release|Any CPU
-		{58760974-18BA-473A-9416-4542F0AF64D9}.Release|x86.Build.0 = Release|Any CPU
+		{2CB93E6A-4D70-4232-8B3B-DFB6F7C84402}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CB93E6A-4D70-4232-8B3B-DFB6F7C84402}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CB93E6A-4D70-4232-8B3B-DFB6F7C84402}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{2CB93E6A-4D70-4232-8B3B-DFB6F7C84402}.Debug|ARM.Build.0 = Debug|Any CPU
+		{2CB93E6A-4D70-4232-8B3B-DFB6F7C84402}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{2CB93E6A-4D70-4232-8B3B-DFB6F7C84402}.Debug|x64.Build.0 = Debug|Any CPU
+		{2CB93E6A-4D70-4232-8B3B-DFB6F7C84402}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2CB93E6A-4D70-4232-8B3B-DFB6F7C84402}.Debug|x86.Build.0 = Debug|Any CPU
+		{2CB93E6A-4D70-4232-8B3B-DFB6F7C84402}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CB93E6A-4D70-4232-8B3B-DFB6F7C84402}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CB93E6A-4D70-4232-8B3B-DFB6F7C84402}.Release|ARM.ActiveCfg = Release|Any CPU
+		{2CB93E6A-4D70-4232-8B3B-DFB6F7C84402}.Release|ARM.Build.0 = Release|Any CPU
+		{2CB93E6A-4D70-4232-8B3B-DFB6F7C84402}.Release|x64.ActiveCfg = Release|Any CPU
+		{2CB93E6A-4D70-4232-8B3B-DFB6F7C84402}.Release|x64.Build.0 = Release|Any CPU
+		{2CB93E6A-4D70-4232-8B3B-DFB6F7C84402}.Release|x86.ActiveCfg = Release|Any CPU
+		{2CB93E6A-4D70-4232-8B3B-DFB6F7C84402}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

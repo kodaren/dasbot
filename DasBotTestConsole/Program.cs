@@ -1,11 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.ServiceBus.Messaging;
 
-namespace DasBotMessageConsole
+namespace DasBotTestConsole
 {
-    public class Program
+    class Program
     {
         static void Main(string[] args)
         {
@@ -35,8 +37,9 @@ namespace DasBotMessageConsole
 
                 string data = Encoding.UTF8.GetString(eventData.GetBytes());
                 Console.WriteLine("Message received: '{0}'", data);
+
+
             }
         }
     }
 }
-
