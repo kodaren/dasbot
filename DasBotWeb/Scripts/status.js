@@ -35,5 +35,5 @@
     }
 
     getDataFromJson();
-    setInterval(getDataFromJson, 10000);
+    setInterval(getDataFromJson, 1000);
 });

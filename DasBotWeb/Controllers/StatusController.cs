@@ -6,6 +6,7 @@ using System.Web.Http;
 using System.Web.WebSockets;
 using DasBotModels;
 using Microsoft.ServiceBus.Messaging;
+using Newtonsoft.Json;
 
 namespace DasBotWeb.Controllers
 {
@@ -29,14 +30,38 @@ namespace DasBotWeb.Controllers
         {
             var internalData = await MessageHandler.StartReceiveAsync();
 
-            var activity = new Activity {Status = true, Name = ActivityType.Sailing, Description = "Segling"};
+            var sensorMessage = JsonConvert.DeserializeObject<SensorMessage>(internalData);
 
-            activity.Status = double.Parse(internalData) > 35.5;
-            activity.Data = internalData;
+            // temprature message
+            if (sensorMessage.Temperature > 0)
+            {
+                var activity = new Activity
+                {
+                    Name = ActivityType.Sailing,
+                    Description = "Segling",
+                    Status = sensorMessage.Temperature > 35.5,
+                    Data = sensorMessage.Temperature.ToString()
+                };
 
-            var activites = new List<Activity> {activity};
+                var activites = new List<Activity> {activity};
 
-            return activites;
+                return activites;
+            }
+
+            else
+            {
+                var activity = new Activity
+                {
+                    Name = ActivityType.Sailing,
+                    Description = "Segling",
+                    Status = sensorMessage.Y > 0,
+                    Data = sensorMessage.Y.ToString()
+                };
+
+                var activites = new List<Activity> {activity};
+
+                return activites;
+            }
         }
         //[Route("status/{statusName}")]
         //public Activity Get(string statusName)
@@ -45,6 +70,21 @@ namespace DasBotWeb.Controllers
         //}
 
 
+
+
+    }
+
+    public class SensorMessage
+    {
+        public double Temperature { get; set; }
+
+        public double X { get; set; }
+
+        public double Y { get; set; }
+
+        public double Z { get; set; }
+
+    
 
 
     }
