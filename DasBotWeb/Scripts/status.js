@@ -23,9 +23,17 @@
         });
         items.push("</ul>");
         $("#activities").html(items.join(""));
+
+        
     }
 
-    $.getJSON("/api/status/")
-     .done(getData);
-    
+    function getDataFromJson() {
+
+        $.getJSON("/api/status/")
+            .done(getData);
+       
+    }
+
+    getDataFromJson();
+    setInterval(getDataFromJson, 10000);
 });
