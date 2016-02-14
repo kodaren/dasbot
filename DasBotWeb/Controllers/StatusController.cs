@@ -58,7 +58,15 @@ namespace DasBotWeb.Controllers
                     Data = sensorMessage.Y.ToString()
                 };
 
-                var activites = new List<Activity> {activity};
+                var activity2 = new Activity
+                {
+                    Name = ActivityType.Fishing,
+                    Description = "Fiske",
+                    Status = sensorMessage.Y < 0,
+                    Data = sensorMessage.Y.ToString()
+                };
+
+                var activites = new List<Activity> {activity, activity2 };
 
                 return activites;
             }
