@@ -62,7 +62,7 @@ namespace DasBotWeb.Controllers
                 {
                     Name = ActivityType.Fishing,
                     Description = "Fiske",
-                    Status = sensorMessage.Y < 0,
+                    Status = sensorMessage.Y < - 0.01,
                     Data = sensorMessage.Y.ToString()
                 };
 
