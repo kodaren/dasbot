@@ -12,34 +12,28 @@ namespace DasBotIoT
         {
         }
 
-
+        private int? lastTemperature = null;
         public override void Run()
         {
-            var tinyFont = new TinyFont();
-
+            int readings = 10;
             ISenseHatDisplay display = SenseHat.Display;
 
-            while (true)
+            while (readings > 0)
             {
                 SenseHat.Sensors.HumiditySensor.Update();
 
                 if (SenseHat.Sensors.Temperature.HasValue)
                 {
                     int temperature = (int)Math.Round(SenseHat.Sensors.Temperature.Value);
-                    string text = temperature.ToString();
-
-                    if (text.Length > 2)
+                    if (lastTemperature != temperature)
                     {
-                        // Too long to fit the display!
-                        text = "**";
+                        lastTemperature = temperature;
+                        MessageHandler.Send(temperature.ToString());
+                        //TODO: SendMessage
                     }
-
-                    display.Clear();
-                    tinyFont.Write(display, text, Colors.White);
-                    display.Update();
-
                     // Sleep quite some time; the temperature usually change quite slowly...
                     Sleep(TimeSpan.FromSeconds(5));
+                    readings--;
                 }
                 else
                 {
