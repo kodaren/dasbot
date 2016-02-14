@@ -3,6 +3,7 @@
      .done(function (data) {
          var items = [];
 
+            $("#activities").empty();
          items.push("<ul class='list-group'>");
          $.each(data, function () {
 
