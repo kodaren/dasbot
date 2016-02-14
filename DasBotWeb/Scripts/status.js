@@ -27,8 +27,5 @@
 
     $.getJSON("/api/status/")
      .done(getData);
-
-    
-    
     
 });

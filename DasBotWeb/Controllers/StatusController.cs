@@ -84,6 +84,8 @@ namespace DasBotWeb.Controllers
 
                 Console.WriteLine("Message received: '{0}'", data);
 
+                await receiver.CloseAsync();
+
                 return data;
             }
         }
