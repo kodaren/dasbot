@@ -29,7 +29,8 @@ namespace DasBotIoT
     {
         public static SenseHatUtility GetSensor(ISenseHat senseHat)
         {
-            return new TemperatureSensor(senseHat);
+            //return new TemperatureSensor(senseHat);
+            return new AccelerometerSensor(senseHat);
             //return new DiscoLights(senseHat); // Click on the joystick to change drawing mode!
 
             //return new JoystickPixel(senseHat); // Use the joystick to move the pixel around.

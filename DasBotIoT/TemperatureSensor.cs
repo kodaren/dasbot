@@ -27,7 +27,8 @@ namespace DasBotIoT
                 if (SenseHat.Sensors.Temperature.HasValue)
                 {
                     var temperature = SenseHat.Sensors.Temperature.Value.ToString("#.##", CultureInfoEn);
-                    MessageHandler.Send(temperature.ToString());
+                    var json = "{ temperature: " + temperature + " }";
+                    MessageHandler.Send(json);
                     //if (lastTemperature != temperature)
                     //{
                     //    lastTemperature = temperature;

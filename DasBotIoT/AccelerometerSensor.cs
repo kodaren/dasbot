@@ -42,7 +42,7 @@ namespace DasBotIoT
 		{
 			while (true)
 			{
-				Sleep(TimeSpan.FromMilliseconds(50));
+				Sleep(TimeSpan.FromMilliseconds(1000));
 
 				if (!SenseHat.Sensors.ImuSensor.Update())
 				{
@@ -54,9 +54,11 @@ namespace DasBotIoT
 					continue;
 				}
 
-				Color[,] colors = CreateGravityBlobScreen(SenseHat.Sensors.Acceleration.Value);
-
-                MessageHandler.Send(SenseHat.Sensors.Acceleration.Value.ToString());
+                var value = SenseHat.Sensors.Acceleration.Value;
+                Color[,] colors = CreateGravityBlobScreen(value);
+                
+                var json = "{ x: " + value.X + ", y: " + value.Y + ", z: " + value.Z + "}";
+                MessageHandler.Send(json);
 
                 SenseHat.Display.CopyColorsToScreen(colors);
 
