@@ -1,4 +1,4 @@
-﻿namespace DasBotWeb.Models
+﻿namespace DasBotModels
 {
     public enum ActivityType
     {
