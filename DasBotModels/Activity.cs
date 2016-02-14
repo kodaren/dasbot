@@ -10,5 +10,7 @@
         public string Description { get; set; }
         public bool Status { get; set; }
         public ActivityType Name { get; set; }
+
+        public string Data { get; set; }
     }
 }

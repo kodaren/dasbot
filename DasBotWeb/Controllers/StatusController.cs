@@ -32,6 +32,7 @@ namespace DasBotWeb.Controllers
             var activity = new Activity {Status = true, Name = ActivityType.Sailing, Description = "Segling"};
 
             activity.Status = double.Parse(internalData) > 35.5;
+            activity.Data = internalData;
 
             var activites = new List<Activity> {activity};
 
