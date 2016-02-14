@@ -2,38 +2,40 @@
 using Windows.UI;
 using Emmellsoft.IoT.Rpi.SenseHat;
 using Emmellsoft.IoT.Rpi.SenseHat.Fonts.SingleColor;
+using System.Globalization;
 
 namespace DasBotIoT
 {
     public class TemperatureSensor : SenseHatUtility
     {
+        public static CultureInfo CultureInfoEn = new CultureInfo("en-GB");
         public TemperatureSensor(ISenseHat senseHat)
             : base(senseHat)
         {
         }
 
-        private int? lastTemperature = null;
+        //private int? lastTemperature = null;
         public override void Run()
         {
-            int readings = 10;
+            
             ISenseHatDisplay display = SenseHat.Display;
 
-            while (readings > 0)
+            while (true)
             {
                 SenseHat.Sensors.HumiditySensor.Update();
 
                 if (SenseHat.Sensors.Temperature.HasValue)
                 {
-                    int temperature = (int)Math.Round(SenseHat.Sensors.Temperature.Value);
-                    if (lastTemperature != temperature)
-                    {
-                        lastTemperature = temperature;
-                        MessageHandler.Send(temperature.ToString());
-                        //TODO: SendMessage
-                    }
+                    var temperature = SenseHat.Sensors.Temperature.Value.ToString("#.##", CultureInfoEn);
+                    MessageHandler.Send(temperature.ToString());
+                    //if (lastTemperature != temperature)
+                    //{
+                    //    lastTemperature = temperature;
+                    //    MessageHandler.Send(temperature.ToString());
+                    //}
                     // Sleep quite some time; the temperature usually change quite slowly...
-                    Sleep(TimeSpan.FromSeconds(5));
-                    readings--;
+                    Sleep(TimeSpan.FromSeconds(10));
+                    
                 }
                 else
                 {
