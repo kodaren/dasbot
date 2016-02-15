@@ -99,7 +99,7 @@ namespace DasBotWeb.Controllers
 
     public static class MessageHandler
     {
-        private const string connectionString = "HostName=CloudHelloHub.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=Mnn1CUPk4cCVUxzWq3oeRgl1Y8XyrAjl4umWMgLr6ho=";
+        private const string connectionString = "HostName=CloudHelloHub.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=";
         private const string iotHubD2cEndpoint = "messages/events";
 
         public static async Task<string> StartReceiveAsync()

@@ -11,7 +11,7 @@ namespace DasBotTestConsole
     {
         static void Main(string[] args)
         {
-            string connectionString = "HostName=CloudHelloHub.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=Mnn1CUPk4cCVUxzWq3oeRgl1Y8XyrAjl4umWMgLr6ho=";
+            string connectionString = "HostName=CloudHelloHub.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=";
             string iotHubD2cEndpoint = "messages/events";
 
             var eventHubClient = EventHubClient.

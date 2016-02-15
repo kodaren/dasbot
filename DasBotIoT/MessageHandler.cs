@@ -10,7 +10,6 @@ namespace DasBotIoT
     public static class MessageHandler
     {
         private const string primaryKey = "Z/z+NcxiFgqD11WNp6AFlVCgK6EyUiSYPWdj4LvGPbE=";
-        private const string secondaryKey = "e6NrMI7XpqnWepjGDPKZwCDModIgWZ6ao7Jj5UKqwSo=";
 
         public static async void Send(string str)
         {
